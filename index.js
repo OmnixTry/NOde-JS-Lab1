@@ -1,4 +1,5 @@
-/*let http = require('http');
+
+let http = require('http');
 let fs = require('fs');
  
 let handleRequest = (request, response) => {
@@ -16,8 +17,10 @@ let handleRequest = (request, response) => {
     });
 };
  
-http.createServer(handleRequest).listen(8000);
-*/
+http.createServer(handleRequest).listen(3000);
+
+
+/*
 
 const http = require("http");
 const fs = require("fs");
@@ -29,7 +32,7 @@ const server = http.createServer((seq, res)=>{
 });
 
 server.listen(3000);
-
+*/
 
 
 
@@ -52,6 +55,23 @@ const server = http.createServer((req, res) => {
     //res.setHeader('Content-Type', 'text/html') 
     //res.sendFile("Lab7.html")
     //res.end(path.resolve("Lab7.html")) 
+}) 
+server.listen(port, hostname, () => { 
+  console.log(`Server running at http://${hostname}:${port}/`) 
+}) 
+*/
+
+/*
+const path = require("path")
+const http = require('http') 
+const hostname = '127.0.0.1' 
+const port = 3000 
+const server = http.createServer((req, res) => { 
+    res.statusCode = 200 
+    res.setHeader('Content-Type', 'text/html') 
+    //res.sendFile("Lab7.html")
+    //res.end(path.resolve(Lab7.html))
+    //res.end('./Lab7.html') 
 }) 
 server.listen(port, hostname, () => { 
   console.log(`Server running at http://${hostname}:${port}/`) 

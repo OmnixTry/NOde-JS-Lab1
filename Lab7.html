@@ -1,0 +1,119 @@
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Lab 7</TITLE>
+    <script>
+        function sum_up() {
+            var item = parseInt(test.catalogue.value);
+            var summ = parseInt(test.sum.value);
+            test.bought.value += test.catalogue.options[test.catalogue.selectedIndex].id + " " + test.quantity.value + "x " + test.catalogue.value + "\n";
+            summ += item * parseInt(test.quantity.value);
+            test.sum.value = summ;
+        }
+        function bg(){
+            var object;
+            if(pickingBg.part.value == 0){
+                object = document.getElementById("the_table").rows[0].cells[0];
+            }
+            if(pickingBg.part.value == 1){
+                object = document.getElementById("the_table").rows[0].cells[1];
+            }
+            if(pickingBg.part.value == 2){
+                object = document.getElementById("the_table").rows[1].cells[0];
+            }
+            if(pickingBg.part.value == 3){
+                object = document.getElementById("the_table").rows[1].cells[1];
+            }
+            if(pickingBg.part.value == 4){
+                object = document.getElementById("the_table");
+            }
+
+            if(pickingBg.what.value == "yellow"){
+                object.style.background = "yellow";
+            }
+            else if(pickingBg.what.value == "1.png"){
+                object.style.backgroundImage = "url(1.png)";
+                object.style.backgroundSize = "100% 100%";
+            }
+            else if(pickingBg.what.value == "both"){
+                object.style.background = "yellow";
+                object.style.backgroundImage = "url(1.png)";
+                object.style.backgroundSize = "100% 100%";
+            }
+        }
+    </script>
+
+<BODY background="fon3.gif">
+    <FORM name="test">
+        <TABLE border=3 align=center cellpadding=5 cellspacing=6 bgcolor=silver>
+            <TR>
+                <TH>catalogue</TH>
+                <TH>Picked goods</ТН>
+            <TR>
+                <TD>
+                    <select size=7 name="catalogue">
+                        <option id="peper" value="10">peper<br>
+                        <option id="bread" value="15">bread<br>
+                        <option id="sourcream" value="3">sourcream<br>
+                        <option id="strawberry shortcake" value="20">strawberry shortcake<br>
+                        <option id="orange juice" value="14">Orange Juice<br>
+                        <option id="potatoes" value="25">Potatoes<br>
+                        <option id="octopus" value="12">Octopus<br>
+                        <option id="bread" value="19">Bread<br>
+                    </select> <br>
+                    quantity
+                    <input type="text" name="quantity" size="2"><br>
+
+                    <input type="button" value="Add" onclick="sum_up()">
+                </TD>
+                <TD>
+                    <textarea name="bought" id="" cols="30" rows="10"></textarea><br>
+                    Sum:
+                    <input type="text" name="sum" value="0">
+                </TD>
+            </TR>
+        </TABLE> <br><br>
+    </FORM>
+
+    <form name="pickingBg">
+    <table>
+        <tr>
+            <td>
+                <select name="part">
+                    <option value="0">top left</option>
+                    <option value="1">top right</option>
+                    <option value="2">bottom left</option>
+                    <option value="3">bottom right</option>
+                    <option value="4">Full Table</option>
+                </select>
+                <select name="what">
+                        <option value="yellow">Yellow</option>
+                        <option value="1.png">picture</option>
+                        <option value="both">Nothing</option>
+                </select>
+                <input type="button" value="apply" onclick="bg()">
+            </td>
+            <td>
+        <TABLE border=1 align=center cellpadding=50 cellspacing=0 id="the_table">
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </TABLE>
+            </td>
+        </tr>
+    </table>
+    </form>
+</BODY>
+
+</HTML>
