@@ -1,10 +1,9 @@
-
 const http = require("http");
 const fs = require("fs");
 
 const handleRequest = (request, response) => {
   response.writeHead(200, {
-    "Content-Type": "text/html",
+    "Content-Type": "text/html"
   });
   fs.readFile("./Lab7.html", null, (error, data) => {
     if (error) {
@@ -19,7 +18,6 @@ const handleRequest = (request, response) => {
 
 http.createServer(handleRequest).listen(3000);
 
-
 /*
 
 const http = require("http");
@@ -33,7 +31,6 @@ const server = http.createServer((seq, res)=>{
 
 server.listen(3000);
 */
-
 
 /* const http = require('http')
 const hostname = '127.0.0.1'
