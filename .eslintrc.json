@@ -17,5 +17,10 @@
     "rules": {
         "semi": ["error", "always"],
         "quotes": ["error", "double"]
+    },
+    "scripts": {
+        "start": "node index.js",
+        "test": "mocha index.js",
+        "lint": "eslint --ext .js"
     }
 }
