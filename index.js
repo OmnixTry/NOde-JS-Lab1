@@ -9,7 +9,7 @@ const handleRequest = (request, response) => {
   fs.readFile("./Lab7.html", null, (error, data) => {
     if (error) {
       response.writeHead(404);
-      respone.write("Whoops! File not found!");
+      response.write("Whoops! File not found!");
     } else {
       response.write(data);
     }
@@ -45,7 +45,7 @@ const server = http.createServer((req, res) => {
   fs.readFile('./index.html', null, function (error, data) {
     if (error) {
         response.writeHead(404);
-        respone.write('Whoops! File not found!');
+        response.write('Whoops! File not found!');
     } else {
         response.write(data);
     }
