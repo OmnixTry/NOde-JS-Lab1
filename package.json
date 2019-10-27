@@ -10,7 +10,7 @@
     "prettier": "prettier --config .prettierrc.json --write src/**/*.js",
     "doc": "esdoc --out docs/src/ --readme ./README.md",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "precommit": "npm run prettier && call npm run lint && call npm run test",
+    "precommit": "npm run prettier && call npm run lint",
     "prepush": "echo 'commit'"
   },
   "author": "Wild Nixon",
