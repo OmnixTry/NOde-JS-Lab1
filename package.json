@@ -16,7 +16,8 @@
   "author": "Wild Nixon",
   "license": "MIT",
   "dependencies": {
-    "loadash": "^1.0.0"
+    "loadash": "^1.0.0",
+    "postinstall": "^0.6.0"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.23",
