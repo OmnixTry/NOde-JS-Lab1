@@ -1,4 +1,4 @@
-
+const port = process.env.port || 3000; 
 const http = require("http");
 const fs = require("fs");
 
@@ -18,7 +18,7 @@ const handleRequest = (request, response) => {
   });
 };
 
-http.createServer(handleRequest).listen(3000);
+http.createServer(handleRequest).listen(port);
 
 
 /*
