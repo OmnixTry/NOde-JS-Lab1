@@ -40,7 +40,7 @@ const server = http.createServer((req, res) => {
   });
  //res.end('Hi there!\n')
 })
-server.listen(port, hostname, () => {
+server.listen(PORT, hostname, () => {
  console.log(`Server running`)
 })
 
